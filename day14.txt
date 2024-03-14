@@ -1,0 +1,52 @@
+Manual :
+
+  class student:
+    pass
+  Rama = student()
+  Rama.name = "Rama"
+  Rama.fathername = "Dasharadha"
+  lakshmana = student()
+  lakshmana.name = "lakshmana "
+  lakshmana.fathername = "Dasharadha"
+  print(Rama.fathername)
+
+=> class == blueprint
+=> Rama, lakshmana == Instance or object
+
+Output:- Dasharada
+
+=> Constructor Method:- To ease our process, in place of .method which we enter manually, we use replace method.
+
+  class student:
+    def __init__ (self, name, fathername):
+      self.name = name
+      self.fathername = fathername
+
+  Rama = student("Rama", "Dasharada")
+  Lakshmana = student("Lakshmana", "Das")
+  print(Rama.fathername)
+
+=> Real World:-
+  class newuser:
+    def __init__ (self, email, password):
+      self.email = email
+      self.password = password
+
+  Yourname = newuser("something@gmail.com", "something")
+  Yourname.captcha = "JKJ34LJ"
+  Lakshmana = newuser("something1@gmail.com", "something1")
+  print(Yourname.email)
+  print(Lakshmana.password)
+  print(Yourname.captcha)
+
+OUTPUT:- something@gmail.com
+         something1
+         JKJ34LJ
+
+=> According to python Enhancement proposal 8 (PEP8) when using class in constructor method, we have to use self
+=> The object which we create is passed as self. Ex:- Yourname, Lakshmana
+=> newuser == class name
+=> newuser's Objects
+   Ex:- Yourname, Lakshmana
+=> Constructor method == __init__
+=> Attributes = email, password, name, fathername.
